@@ -1,0 +1,259 @@
+@font-face {
+    font-family: "PT Sans";
+    src: url(../fonts/PTSans/PTSansBold/pt-sans-v8-latin_cyrillic-700.woff2) format("woff2"), url(../fonts/pt-sans-v8-latin_cyrillic-700.woff) format("woff");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "PT Sans";
+    src: url(../fonts/PTSans/PTSansRegular/pt-sans-v8-latin_cyrillic-regular.woff2) format("woff2"), url(../fonts/pt-sans-v8-latin_cyrillic-regular.woff) format("woff");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "Akrobat";
+    src: url(../fonts/Akrobat/AkrobatBold/Akrobat-ExtraBold.woff2) format("woff2"), url(../fonts/Akrobat-ExtraBold.woff) format("woff");
+    font-weight: 400;
+    font-style: normal
+}
+
+html.remodal-is-locked{
+    overflow:scroll;
+    touch-action: cross-slide-y;
+}
+ .remodal, [data-remodal-id]{
+    display:none;
+}
+ .remodal-overlay{
+    position:fixed;
+    z-index:9999;
+    top:-5000px;
+    right:-5000px;
+    bottom:-5000px;
+    left:-5000px;
+    display:none;
+}
+ .remodal-wrapper{
+    /*position:fixed;*/
+    z-index:10000;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    display:none;
+    text-align:center;
+    -webkit-overflow-scrolling:touch;
+    display:flex;
+     width: 500px;
+     max-height: 1000px;
+     min-height: 600px;
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%,-50%);
+}
+ .remodal-wrapper:after{
+    display:inline-block;
+    height:100%;
+    margin-left:-0.05em;
+    content:"";
+}
+ .remodal-overlay, .remodal-wrapper{
+    backface-visibility:hidden;
+}
+ .remodal-overlay{
+    background-color:#777777;
+    opacity:0.6;
+}
+ .remodal{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+ .remodal-is-initialized{
+    display:flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+     background-color: #fff;
+     width: 500px;
+     max-height: 1000px;
+     min-height: 666px;
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%,-50%);
+     box-shadow: 0 0 5px #000;
+     outline: none;
+}
+ .formContainer{
+}
+.mainInput{
+    width: 80%;
+    padding: 15px 35px;
+    border: 1px solid #cdcdcd;
+    font-size: 16px;
+    color: #000;
+    margin: 5px auto;
+}
+.heading{
+  background-color: #2f2e2e;
+  padding: 25px;
+  text-align: center;
+}
+.heading > h3{
+  font-family: "Akrobat";
+  color: #fff;
+  font-size: 36px;
+  margin: 0;
+}
+.redaccent{
+    color: #fd100a;
+  font-family: "Akrobat";
+  font-weight: bold;
+}
+.subHeading > h4{
+  font-family: "Akrobat";
+    font-size: 24px;
+    font-weight: normal;
+    line-height: normal;
+    margin: 10px 0;
+}
+.submitInput{
+  font-family: "Akrobat";
+    position: relative;
+    cursor: pointer;
+    box-sizing: border-box;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 17px;
+    background-color: #fd100a;
+    color: #fff;
+    max-width: 385px;
+    height: 60px;
+    line-height: 53px;
+    width: 100%;
+    vertical-align: middle;
+    border-radius: 5px;
+    text-align: center;
+    margin: 30px auto 15px;
+    font-size: 26px;
+    border: none; 
+}
+.my-guarantee__img{
+  width: 100%;
+}
+.grnBut{
+      background-color: #50a772 !important;
+}
+.ylwBut{
+      background-color: #ea9a39 !important;
+}
+.subHeading{
+    margin: 20px 20px 0;
+}
+.subHeading > p{
+    font-size: 18px;
+    padding: 0 35px 5px;   
+}
+.mainInput::-webkit-input-placeholder {
+  color: #cdcdcd;
+}
+
+.mainInput:-moz-placeholder {
+  color: #cdcdcd;
+}
+
+.mainInput::-moz-placeholder {
+  color: #cdcdcd;
+}
+
+.mainInput:-ms-input-placeholder {
+  color: #cdcdcd;
+}
+.spam{
+    width: 80%;
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+.spam > span{
+    font-size: 16px;
+    color: #a1a1a1;
+    line-height: normal;
+    font-family: "Akrobat";
+}
+.spam > div > img{
+    width: 20px;
+}
+.remodal-close{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    z-index: 99999;
+    background-color: transparent;
+    border: none;
+}
+.moonray-form-input-type-email{
+  margin-bottom: 5px;
+}
+
+@media only screen and (max-width:381px) {
+.remodal-is-initialized{
+    width: 90%;
+    margin: 0 auto;
+}
+.subHeading{
+    margin: 5px;
+}
+.intl-tel-input.separate-dial-code.allow-dropdown.iti-sdc-2 input, .intl-tel-input.separate-dial-code.allow-dropdown.iti-sdc-2 input[type=text], .intl-tel-input.separate-dial-code.allow-dropdown.iti-sdc-2 input[type=tel]{
+      width: 260px;
+    margin: 0 auto;
+}
+.submitInput{
+    font-size: 16px;
+    width: 95%;
+}
+.remodal-is-initialized{
+    max-height: 1000px;
+    width: 65%;
+}
+input.intl-tel-input{
+  width: 100%!important;
+}
+.spam > div > img{
+    width: 30px;
+}
+.heading > h3{
+  font-size: 22px;
+}
+.subHeading > h4{
+  font-size: 18px;
+}
+.subHeading > p{
+  font-size: 12px;
+  line-height: 1.4;
+}
+.spam > span{
+  font-size: 10px;
+}
+.submitInput{
+  width: 85%;
+  font-size: 14px;
+}
+.remodal-is-initialized{
+  height: 550px;
+  min-height: 550px;
+  max-height: 600px;
+}
+.submitInput{
+  margin: 15px auto 15px;
+  height: 50px;
+}
+
+}

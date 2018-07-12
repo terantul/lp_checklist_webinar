@@ -1,0 +1,338 @@
+@charset "utf-8";
+/* Простой «резиновый» носитель
+   Примечание. Для «резинового» носителя требуется удалить атрибуты высоты и ширины из HTML
+   http://www.alistapart.com/articles/fluid-images/ 
+*/
+img, object, embed, video, iframe {
+	max-width: 100%;
+}
+/* IE6 не поддерживает атрибут max-width, поэтому по умолчанию используется ширина 100 % */
+.ie6 img {
+	width:100%;
+}
+*, *:before, *:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+/*
+	Свойства Dreamweaver Fluid Grid
+	----------------------------------
+	dw-num-cols-mobile:		5;
+	dw-num-cols-tablet:		8;
+	dw-num-cols-desktop:	10;
+	dw-gutter-percentage:	25;
+	
+	Вдохновлено книгой «Отзывчивый веб-дизайн» (Responsive Web Design) Итана Маркота (Ethan Marcote) 
+	http://www.alistapart.com/articles/responsive-web-design
+	
+	и системой Golden Grid Джони Корпи (Joni Korpi)
+	http://goldengridsystem.com/
+*/
+
+/* Мобильный макет: 480 пикс. и меньше. */
+.head {
+  background-color: #f9f9f9;
+  padding: 0.6%;
+  /* border-bottom: 4px solid #ffd349; */
+  -webkit-box-shadow: 0px 3px 6px 0px rgba(50, 50, 50, 0.3);
+  -moz-box-shadow: 0px 3px 6px 0px rgba(50, 50, 50, 0.3);
+  box-shadow: 0px 3px 6px 0px rgba(50, 50, 50, 0.3);
+/*	background-image: url(images/header.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-color: #CCC;
+	padding: 0.6%;*/
+	/*border-bottom: 4px solid #b42323;*/
+}
+.head .content p{
+	color: #000;
+	font-size: 18px;
+	font-weight: bold;
+}
+.head .content h1{
+	font-weight: normal;
+	font-size: 25px;
+}
+.head .content h2 {
+	color: #000;
+	font-size: 18px;
+	font-weight: normal;
+	text-align:center;
+}
+footer {background: #e0e0e0; color: #000;}
+footer a {color: #000; text-decoration:none;}
+footer a:hover {color: #000; text-decoration:underline;}
+footer a:visited {color: #000;}
+.center {
+	text-align:center;
+	margin-left: auto;
+	margin-right: auto;
+}
+.clear {clear: both;}
+.gridContainer {
+	margin-left: auto;
+	margin-right: auto;
+	width: 87.36%;
+	padding-left: 1.82%;
+	padding-right: 1.82%;
+}
+
+.OAP_input {
+	width: 80%;
+	height: 40px;
+	margin: 5px 0;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	border:1px solid #a0a0a0;
+	text-indent: 30px;
+}
+.myButton {
+	-moz-box-shadow: 0px 3px 0px 0px #d57b07;
+	-webkit-box-shadow: 0px 3px 0px 0px #d57b07;
+	box-shadow: 0px 3px 0px 0px #d57b07;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f6b711), color-stop(1, #e88906));
+	background:-moz-linear-gradient(top, #f6b711 5%, #e88906 100%);
+	background:-webkit-linear-gradient(top, #f6b711 5%, #e88906 100%);
+	background:-o-linear-gradient(top, #f6b711 5%, #e88906 100%);
+	background:-ms-linear-gradient(top, #f6b711 5%, #e88906 100%);
+	background:linear-gradient(to bottom, #f6b711 5%, #e88906 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6b711', endColorstr='#e88906',GradientType=0);
+	background-color:#f6b711;
+	border:none;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;	
+	font-size:18px;
+	font-weight:bold;
+	padding-top:12px;
+	padding-bottom:12px;
+	text-decoration:none;
+	margin: 10px auto;
+	width: 80%;	
+}
+.myButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #e88906), color-stop(1, #f6b711));
+	background:-moz-linear-gradient(top, #e88906 5%, #f6b711 100%);
+	background:-webkit-linear-gradient(top, #e88906 5%, #f6b711 100%);
+	background:-o-linear-gradient(top, #e88906 5%, #f6b711 100%);
+	background:-ms-linear-gradient(top, #e88906 5%, #f6b711 100%);
+	background:linear-gradient(to bottom, #e88906 5%, #f6b711 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#e88906', endColorstr='#f6b711',GradientType=0);
+	background-color:#e88906;
+	color:#ffffff;
+}
+.myButton:active, .myButton2:active {
+	position:relative;
+	top:1px;
+	color:#ffffff;
+}
+.myButton:visited, .myButton2:visited {
+	color:#ffffff;
+}
+
+.myButton2 {
+	-moz-box-shadow: 0px 3px 0px 0px #d57b07;
+	-webkit-box-shadow: 0px 3px 0px 0px #d57b07;
+	box-shadow: 0px 3px 0px 0px #d57b07;
+	background-color:#f6b711;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;	
+	font-size:18px;
+	font-weight:bold;
+	padding-top:12px;
+	padding-bottom:12px;
+	text-decoration:none;
+	margin: 10px auto;
+	width: 80%;	
+	  border: none;
+}
+.myButton2:hover {
+	background-color:#d57b07;
+	color:#ffffff;
+}
+
+.h24 {font-size:24px;}
+.content {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;	
+	padding-top: 1.5%;
+	padding-bottom: 1.5%;
+}
+.content h1 {
+	font-weight: bold;
+	font-size: 30px;
+	color: #000000;
+}
+.column {
+ float: left;
+}
+.two-thirds, .fifth { width: 100%; }
+.third { width: 100%; padding: 2% 0;}
+
+.clearfix:before,
+.clearfix:after {
+ content: " ";
+ display: table;
+}
+ 
+.clearfix:after {
+ clear: both;
+}
+img {
+	text-align:center;
+	margin:0 auto;
+	display:block;
+}
+table { display: table; vertical-align:middle;}
+.color {
+/*	background: #ebebeb;*/
+}
+.offer {background: #cee5bb;}
+.fourth, .col_80 { width: 100%; }
+.half { width: 100%; }
+
+.flow-opposite {float: right;}
+.left { margin: 0 auto; padding-right: 0;}
+.right { margin: 0 auto; padding-right: 0;}
+
+.check, .check_b {padding: 0;}
+.check li { list-style-type:none; background-repeat:no-repeat; padding-left: 45px;height: 35px; display: table; margin-top: 10px;}
+.check_b li { list-style-type:none; background-image: url(images/gal_2.png); background-repeat:no-repeat;padding-left: 75px;
+  height: 65px; display: table; margin-top: 10px;}
+
+.gar {
+     cursor:pointer;
+     color:blue;
+     font-size:16px;    
+     text-align:center;
+}
+.gar:hover {text-decoration:underline;}
+.gar_img {cursor:pointer;}
+label.error {
+	font-size:14px;
+	color:red;
+	float: left;
+	width: 100%;
+	text-align: left;
+	margin-left: 10%;
+/* 	position: absolute;
+	margin-top: 10px;
+	
+ */}
+.with_hr {	
+	background: #d7d7d7;
+	padding: 1% 5%;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	margin: 0 auto;
+	color: #363636;
+	font-size: 15px;
+}
+.simbol {
+	font-size: 20px;
+	color: #BABABA;
+}
+.oplata {
+	width: 90%;
+	background:#FFF;
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+	border-radius:15px;
+	padding: 4% 0;
+	border: 1px solid #7794c3;
+}
+
+#my_email {
+width: 80%;
+height: 40px;
+border: 1px solid #c6c4c4;
+border-radius: 5px;	
+}
+#validEmail {margin-left: 3px;}
+.table_adapt td {display:block;}
+
+.arrow {
+	border-bottom: 1.5px solid #92ab29;
+	  position: relative;	
+}
+.arrow:after {
+  z-index: 1;
+  position: absolute;
+  left: 50%;
+  bottom: -15px;
+  content: '';
+  width: 0;
+  height: 0;
+  border-top: solid 15px #92ab29;
+  border-left: solid 15px transparent;
+  border-right: solid 15px transparent;
+  margin-left: -15px;
+}
+.dush {
+	border-bottom: 2px dashed #ffd349 ;	
+}
+.dush_b {
+	border-bottom: 2px dashed #ffd349;	
+}
+
+/* Макет для планшета: 481–768 пикс. Наследует стили от мобильного макета. */
+
+@media only screen and (min-width: 481px) {
+.gridContainer {
+	width: 90.675%;
+	padding-left: 1.1625%;
+	padding-right: 1.1625%;
+}
+.right { float: right; padding-right: 3%;}
+.oplata {
+	width: 70%;
+}
+}
+
+/* Макет для настольного компьютера: 769–1232 пикс. (максимум). Наследует стили от мобильного макета и макета для планшета. */
+
+@media only screen and (min-width: 769px) {
+.gridContainer {
+	width: 88.2%;
+	max-width: 768px;
+	padding-left: 0.9%;
+	padding-right: 0.9%;
+	margin: auto;
+}
+.head .content h2 {
+	text-align:left;
+}
+.two-thirds { width: 66.7%; }
+.third { width: 33.3%; }
+.fourth { width: 25%; }
+.fifth { width: 20%; }
+.half { width: 50%; padding: 0 2%; }
+.col_80 { width: 80%; }
+.leftimg {margin: 0; padding: 0 0 0 40px;}
+.left { float: left; padding-right: 3%;}
+.right { float: right; padding-right: 3%;}
+.table_adapt td {display: table-cell;}
+.oplata {
+	width: 90%;
+	margin-top: 0.83em;
+}
+}
+
